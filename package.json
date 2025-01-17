@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "@vue/cli": "^5.0.8",
     "vitepress": "^1.5.0"
   },
   "scripts": {
