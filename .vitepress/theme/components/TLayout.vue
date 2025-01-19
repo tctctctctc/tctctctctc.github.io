@@ -1,13 +1,14 @@
 <template>
   <layout>
-    <template #layout-top> </template>
+    <template #layout-top>
+      <t-home></t-home>
+    </template>
   </layout>
 </template>
 
 <script setup lang="ts">
-import { useData } from "vitepress";
-
 import DefaultTheme from "vitepress/theme";
+import THome from "./THome.vue";
 
 const { Layout } = DefaultTheme;
 </script>

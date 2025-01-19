@@ -17,7 +17,7 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/tctctctctc' }
     ],
     /** logo-位于站点标题前 */
-    logo: '/images/head.jpg'
+    logo: '/images/head.jpg',
     /** 页脚配置 */
     footer: {
       message: '<a href="https://beian.miit.gov.cn/">湘ICP备2023000741号-1</a>',
