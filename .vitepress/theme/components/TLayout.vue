@@ -1,6 +1,6 @@
 <template>
   <layout>
-    <template #layout-top>
+    <template #home-hero-before>
       <t-home></t-home>
     </template>
   </layout>
