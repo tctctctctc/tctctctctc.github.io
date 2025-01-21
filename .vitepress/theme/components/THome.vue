@@ -6,12 +6,17 @@
     <div class="t-home-info">
       <!-- 标题 -->
       <h1 class="t-site-title">{{ $frontmatter.home.title }}</h1>
+
+      <!-- 打字机 -->
+      <t-typing />
     </div>
   </div>
 </template>
 
 <script setup>
 import { useData } from "vitepress";
+
+import TTyping from "./TTyping.vue";
 
 const { frontmatter, isDark } = useData();
 
@@ -45,6 +50,7 @@ const bgStyle = {
   font-size: 4rem;
   font-weight: 600;
   color: white;
+  line-height: 1.5;
 }
 
 .t-wrap {
