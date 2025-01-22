@@ -10,6 +10,11 @@
       <!-- 打字机 -->
       <t-typing />
     </div>
+
+    <!-- 底部下滑导航 -->
+    <div class="t-scroll-down">
+      <i @click="onScrollDown"></i>
+    </div>
   </div>
 </template>
 
@@ -28,12 +33,39 @@ const bgStyle = {
   backgroundSize: "cover",
   backgroundRepeat: "no-repeat",
 };
+
+// 向下滑动
+const onScrollDown = () => {
+  window.scrollTo({
+    top: window.innerHeight,
+    left: 0,
+    behavior: "smooth",
+  });
+};
 </script>
 
 
 <style>
+@keyframes scroll-down {
+  0% {
+    bottom: 10px;
+    opacity: 1;
+  }
+
+  50% {
+    bottom: 0px;
+    opacity: 0.4;
+    filter: none;
+  }
+
+  100% {
+    bottom: 10px;
+    opacity: 1;
+  }
+}
+
 .t-home {
-  width: 100vw;
+  width: 100%;
   height: calc(100vh - 64px);
   position: relative;
 }
@@ -42,7 +74,7 @@ const bgStyle = {
   position: absolute;
   top: 35%;
   padding: 0 10px;
-  width: 100%;
+  width: 100vw;
   text-align: center;
 }
 
@@ -51,6 +83,27 @@ const bgStyle = {
   font-weight: 600;
   color: white;
   line-height: 1.5;
+}
+
+.t-home > .t-scroll-down {
+  width: 100%;
+  position: absolute;
+  bottom: 10px;
+  font-weight: 900;
+  line-height: 1.5;
+  animation: scroll-down 1.5s infinite;
+  text-align: center;
+  color: #eee;
+  font-size: 30px;
+}
+
+.t-home > .t-scroll-down > i::before {
+  content: "";
+  border-top: 10px solid #eee;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  transform: translate(-50%, -50%) rotate(45deg);
+  cursor: pointer;
 }
 
 .t-wrap {
