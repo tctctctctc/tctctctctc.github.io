@@ -1,7 +1,7 @@
 ---
 title: JavaScript-APIs.md
-date: 2023-10-25 20:28:20
-updated:
+date: '2023-10-25'
+updated: '2025-02-05'
 tags: 
   - JavaScript
   - 笔记
@@ -9,6 +9,7 @@ categories:
   - 笔记
 keywords: 'Javascript,JS,DOM操作'
 description: 关于 JavaScript 的常用 API，比如 DOM 操作相关 API
+cover: https://pic1.imgdb.cn/item/6649c59ed9c307b7e927566e.png
 ---
 
 ## 1. DOM -获取元素

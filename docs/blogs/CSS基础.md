@@ -1,7 +1,7 @@
 ---
 title: CSS基础
-date: 2023-09-16 10:36:35
-updated: 
+date: '2023-09-16'
+updated: '2025-02-05'
 tags: 
  - CSS
  - 笔记
@@ -9,6 +9,7 @@ categories:
  - 笔记
 keywords: 'CSS,CSS样式,选择器'
 description: 关于 CSS2 的一些基础知识
+cover: https://pic1.imgdb.cn/item/6649c280d9c307b7e92368b3.jpg
 ---
 
 # CSS 基础

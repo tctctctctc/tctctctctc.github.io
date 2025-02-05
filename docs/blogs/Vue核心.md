@@ -1,7 +1,7 @@
 ---
 title: Vue核心
-date: 2023-09-16 12:33:45
-updated:
+date: '2023-09-16'
+updated: '2025-02-05'
 tags: 
  - Vue
  - 笔记
@@ -9,6 +9,7 @@ categories:
  - 笔记
 keywords: 'Vue,Vue指令'
 description: 关于 Vue2 的基础知识，涉及部分 Vue3 新特性
+cover: https://pic1.imgdb.cn/item/6649c5c3d9c307b7e92777b5.jpg
 ---
 
 ## 1. 简介

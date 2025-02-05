@@ -1,7 +1,7 @@
 ---
 title: Vue路由
-date: 2024-03-18 21:19:05
-updated:
+date: '2024-03-18'
+updated: '2025-02-05'
 tags:
  - Vue
  - 笔记
@@ -9,6 +9,7 @@ categories:
  - 笔记
 keywords: 'Vue,Router,多级路由,路由守卫'
 description: 关于 Vue 路由的相关知识，包括路由的基本使用、多级路由、路由参数、路由守卫等
+cover: https://pic1.imgdb.cn/item/6649c5c5d9c307b7e927794d.jpg
 ---
 
 ## 1. 理解路由

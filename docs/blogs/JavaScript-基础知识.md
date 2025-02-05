@@ -1,7 +1,7 @@
 ---
 title: JavaScript 基础知识
-date: 2023-09-17 20:19:21
-updated:
+date: '2023-09-17'
+updated: '2025-02-05'
 tags:
  - JavaScript
  - 笔记
@@ -9,6 +9,7 @@ categories:
  - 笔记
 keywords: 'Javascript,JS,JS基础'
 description: 关于 JavaScript 的基础知识，比如变量、数据类型等
+cover: https://pic1.imgdb.cn/item/6649c59ed9c307b7e9275623.jpg
 ---
 
 ## 1. 介绍

@@ -1,14 +1,14 @@
 ---
 title: 云服务器部署Twikoo
-date: 2024-06-01 16:10:44
-updated:
+date: '2024-06-01'
+updated: '2025-02-05'
 tags:
  - twikoo
 categories: 
  - 技术
 keywords: 'twikoo,twikoo部署,云服务器部署twikoo,博客评论'
 description: 云服务器部署 twikoo 评论系统过程记录
-cover:
+cover: https://pic1.imgdb.cn/item/6649c1fcd9c307b7e922bc65.jpg
 ---
 
 ## 1. 背景

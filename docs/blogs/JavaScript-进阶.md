@@ -1,7 +1,7 @@
 ---
 title: JavaScript-进阶
-date: 2024-01-14 11:00:58
-updated:
+date: '2024-01-14'
+updated: '2025-02-05'
 tags: 
   - JavaScript
   - 笔记
@@ -9,6 +9,7 @@ categories:
   - 笔记
 keywords: 'Javascript,JS,解构,对象原型'
 description: 关于 JavaScript 的进阶知识，比如解构赋值、对象原型、异常处理等
+cover: https://pic1.imgdb.cn/item/6649c59ed9c307b7e927563b.jpg
 ---
 
 ## 1. 作用域

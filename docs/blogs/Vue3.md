@@ -1,7 +1,7 @@
 ---
 title: Vue3
-date: 2024-03-31 11:15:06
-updated:
+date: '2024-03-31'
+updated: '2025-02-05'
 tags:
  - Vue
  - 笔记
@@ -9,6 +9,7 @@ categories:
  - 笔记
 keywords: 'Vue3,组合式API,ref,reactive'
 description: 关于 Vue3 的相关知识，包括组合式 Api、响应式原理、生命周期钩子、新组件等
+cover: https://pic1.imgdb.cn/item/6649c59fd9c307b7e9275686.jpg
 ---
 
 ## 1. Vue3 带来了什么

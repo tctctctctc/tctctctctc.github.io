@@ -1,7 +1,7 @@
 ---
 title: Vue组件化编程
-date: 2024-02-28 22:19:34
-updated:
+date: '2024-02-28'
+updated: '2025-02-05'
 tags:
  - Vue
  - 笔记
@@ -9,6 +9,7 @@ categories:
  - 笔记
 keywords: 'Vue,Vue组件'
 description: 关于 Vue 组件化编程的前置基础知识，帮助了解 Vue 组件
+cover: https://pic1.imgdb.cn/item/6649c5c5d9c307b7e9277964.jpg
 ---
 
 组件的作用：实现应用中局部功能代码和资源的集合，提高代码复用率

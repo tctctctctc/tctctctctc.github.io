@@ -1,7 +1,7 @@
 ---
 title: Vuex
-date: 2024-03-17 15:43:27
-updated:
+date: '2024-03-17'
+updated: '2025-02-05'
 tags:
  - Vue
  - 笔记
@@ -9,6 +9,7 @@ categories:
  - 笔记
 keywords: 'Vue,Vuex'
 description: 关于 Vue 状态管理的相关知识，通过本文章可以了解 Vuex 的基本使用
+cover: https://pic1.imgdb.cn/item/6649c5c5d9c307b7e927797d.jpg
 ---
 
 ## 1. 理解 Vuex

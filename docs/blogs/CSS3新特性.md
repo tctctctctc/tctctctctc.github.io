@@ -1,7 +1,7 @@
 ---
 title: CSS3新特性
-date: 2024-05-07 19:48:13
-updated:
+date: '2024-05-07'
+updated: '2025-02-05'
 tags:
  - CSS
  - 笔记
@@ -9,7 +9,7 @@ categories:
  - 笔记
 keywords: 'CSS3,CSS,CSS3新特性'
 description:  CSS3 新增的一些特性，如变换、过渡、动画、伸缩盒模型等
-cover:
+cover: https://pic1.imgdb.cn/item/6649c20fd9c307b7e922d8bc.jpg
 ---
 
 ## 1. 新特性

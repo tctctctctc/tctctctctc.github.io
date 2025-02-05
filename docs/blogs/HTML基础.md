@@ -1,7 +1,7 @@
 ---
 title: HTML基础
-date: 2023-08-16
-updated: 
+date: '2023-08-16'
+updated: '2025-02-05'
 tags: 
  - HTML
  - 笔记
@@ -9,6 +9,7 @@ categories:
  - 笔记
 keywords: 'HTML'
 description: 关于 HTML 的一些基础知识，即一些常见的标签，也涉及部分 H5 新特性
+cover: https://pic1.imgdb.cn/item/6649c2dcd9c307b7e923e851.jpg
 ---
 
 ## 1. HTML基础

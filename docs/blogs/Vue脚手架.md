@@ -1,7 +1,7 @@
 ---
 title: Vue脚手架
-date: 2024-03-06 21:12:14
-updated:
+date: '2024-03-06'
+updated: '2025-02-05'
 tags:
  - Vue
  - 笔记
@@ -9,6 +9,7 @@ categories:
  - 笔记
 keywords: 'Vue,Vue脚手架,ref,props,mixin'
 description: 利用 Vue 脚手架进行开发的相关知识，如组件通信、插件、自定义事件等
+cover: https://pic1.imgdb.cn/item/6649c5c4d9c307b7e927787f.png
 ---
 
 ## 1. 初识脚手架
