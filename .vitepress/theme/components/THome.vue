@@ -19,7 +19,7 @@
 </template>
 
 <script setup>
-import { useData } from "vitepress";
+import { useData, withBase } from "vitepress";
 
 import TTyping from "./TTyping.vue";
 
@@ -27,7 +27,7 @@ const { frontmatter, isDark } = useData();
 
 // 背景图样式
 const bgStyle = {
-  background: `url(${frontmatter.value?.home.homeBg})`,
+  background: `url(${withBase(frontmatter.value?.home.homeBg)})`,
   backgroundAttachment: "fixed",
   backgroundPosition: "center",
   backgroundSize: "cover",

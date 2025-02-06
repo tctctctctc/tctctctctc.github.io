@@ -25,9 +25,9 @@ export default defineConfig({
       copyright: 'Copyright © 2024-2025 By Tang'
     },
     /** 博客 */
-    blogs: getMDFilesWithFrontmatter('docs')
+    blogs: getMDFilesWithFrontmatter('blogs')
   },
   /** 设置head标签 */
-  head: [['link', { rel: 'icon', href: 'images/head.jpg' }]],
-  base: '/blogs/'
+  head: [['link', { rel: 'icon', href: '/images/head.jpg' }]],
+  base: '/docs/'
 })
