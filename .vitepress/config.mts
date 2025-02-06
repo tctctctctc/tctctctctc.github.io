@@ -28,6 +28,6 @@ export default defineConfig({
     blogs: getMDFilesWithFrontmatter('blogs')
   },
   /** 设置head标签 */
-  head: [['link', { rel: 'icon', href: '/images/head.jpg' }]],
+  head: [['link', { rel: 'icon', href: '/docs/images/head.jpg' }]],
   base: '/docs/'
 })

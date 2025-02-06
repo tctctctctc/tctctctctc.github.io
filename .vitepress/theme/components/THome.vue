@@ -1,5 +1,5 @@
 <template>
-  <div class="t-home" :style="bgStyle">
+  <div ref="homeRef" class="t-home" :style="bgStyle">
     <!-- 遮罩 -->
     <div :class="['t-wrap', isDark ? 'dark' : '']"></div>
 
@@ -20,6 +20,7 @@
 
 <script setup>
 import { useData, withBase } from "vitepress";
+import { ref } from "vue";
 
 import TTyping from "./TTyping.vue";
 
@@ -35,9 +36,10 @@ const bgStyle = {
 };
 
 // 向下滑动
+const homeRef = ref();
 const onScrollDown = () => {
   window.scrollTo({
-    top: window.innerHeight,
+    top: homeRef.value.offsetHeight + 64,
     left: 0,
     behavior: "smooth",
   });
@@ -83,6 +85,13 @@ const onScrollDown = () => {
   font-weight: 600;
   color: white;
   line-height: 1.5;
+}
+
+@media screen and (max-width: 640px) {
+  .t-home > .t-home-info > .t-site-title {
+    font-size: 3rem;
+    font-weight: 600;
+  }
 }
 
 .t-home > .t-scroll-down {

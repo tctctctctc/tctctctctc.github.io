@@ -38,7 +38,6 @@ const { theme, isDark } = useData();
 
 // 博客数据
 const blogInfos = theme.value.blogs;
-console.log("111", theme.value.blogs);
 </script>
 
 <style>

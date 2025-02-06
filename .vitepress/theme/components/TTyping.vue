@@ -38,7 +38,7 @@ const computeStyle = () => {
 const typing = () => {
   if (!typingWords.length) return;
   computeStyle();
-  setInterval(computeStyle, 5005);
+  setInterval(computeStyle, 5001);
 };
 typing();
 </script>
@@ -77,5 +77,12 @@ typing();
   white-space: nowrap;
   overflow: hidden;
   border-right: 0.1em solid;
+}
+
+@media screen and (max-width: 640px) {
+  .t-subtitle {
+    margin: 0 auto;
+    font-size: 1.2em;
+  }
 }
 </style>
