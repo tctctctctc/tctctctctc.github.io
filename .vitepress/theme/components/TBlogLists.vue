@@ -140,6 +140,7 @@ const blogInfos = theme.value.blogs;
   .t-list-container > .t-lists > ul > li > .t-blog-cover {
     width: 100%;
     height: 100%;
+    border-radius: 8px 8px 0 0 !important;
   }
 }
 </style>
