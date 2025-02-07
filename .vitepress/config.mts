@@ -25,9 +25,18 @@ export default defineConfig({
       copyright: 'Copyright © 2024-2025 By Tang'
     },
     /** 博客 */
-    blogs: getMDFilesWithFrontmatter('blogs')
+    blogs: getMDFilesWithFrontmatter('blogs'),
+    /** 最后更新-文本 */
+    lastUpdatedText: '最后更新于',
+    /** 博客列表pageSize */
+    pageSize: 5,
+    /** 大纲级别 */
+    outline: [2, 5]
   },
   /** 设置head标签 */
   head: [['link', { rel: 'icon', href: '/docs/images/head.jpg' }]],
-  base: '/docs/'
+  /** 站点根url */
+  base: '/docs/',
+  /** 文档底部最后更新于 */
+  lastUpdated: true
 })

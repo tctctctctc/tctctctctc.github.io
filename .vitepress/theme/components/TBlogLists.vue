@@ -4,7 +4,7 @@
     <div class="t-lists">
       <ul :class="isDark ? 'isDark' : ''">
         <li
-          v-for="(blog, index) in blogInfos"
+          v-for="(blog, index) in blogs"
           :key="blog.path"
           :class="index % 2 ? '' : 'reverse-cover'"
         >
@@ -27,17 +27,66 @@
           </div>
         </li>
       </ul>
+
+      <!-- 分页 -->
+      <div class="t-pagination">
+        <button
+          :class="isDark ? 'dark' : ''"
+          :disabled="currentPage === 1"
+          @click="subPage"
+        >
+          {{ "<" }}
+        </button>
+        <span class="t-page-info">{{ currentPage }} / {{ maxPage }}</span>
+        <button
+          :class="isDark ? 'dark' : ''"
+          :disabled="currentPage === maxPage"
+          @click="addPage"
+        >
+          {{ ">" }}
+        </button>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
 import { useData } from "vitepress";
+import { ref, computed } from "vue";
 
 const { theme, isDark } = useData();
 
 // 博客数据
 const blogInfos = theme.value.blogs;
+
+// 当前页
+const currentPage = ref(1);
+
+// 每页文章数
+const pageSize = theme.value.pageSize ?? 5;
+
+// 最大页码
+const maxPage = Math.ceil(blogInfos.length / pageSize);
+
+const blogs = computed(() => {
+  const startIndex = (currentPage.value - 1) * pageSize;
+  const endIndex = startIndex + pageSize;
+  return blogInfos.slice(startIndex, endIndex);
+});
+
+// 页码减
+const subPage = () => {
+  if (currentPage.value > 1) {
+    currentPage.value--;
+  }
+};
+
+// 页码加
+const addPage = () => {
+  if (currentPage.value < maxPage) {
+    currentPage.value++;
+  }
+};
 </script>
 
 <style>
@@ -142,5 +191,42 @@ const blogInfos = theme.value.blogs;
     height: 100%;
     border-radius: 8px 8px 0 0 !important;
   }
+}
+
+.t-list-container > .t-lists > .t-pagination {
+  display: flex;
+  justify-content: space-evenly;
+  line-height: 2.5em;
+}
+
+.t-list-container > .t-lists > .t-pagination > button {
+  font-size: 1.25em;
+  font-weight: 600;
+  background: var(--vp-c-bg);
+  box-shadow: 0 3px 8px 6px rgba(7, 17, 27, 0.05);
+  border-radius: 8px;
+  width: 3.5em;
+  height: 2.5em;
+  transition: all 0.2s linear;
+}
+
+.t-list-container > .t-lists > .t-pagination > button:hover {
+  background: var(--vp-c-bg-alt);
+}
+
+.t-list-container > .t-lists > .t-pagination > button.dark {
+  box-shadow: 0 3px 8px 6px rgba(236, 239, 242, 0.2);
+}
+
+.t-list-container > .t-lists > .t-pagination > button:disabled {
+  cursor: not-allowed;
+  color: #999;
+  background: var(--vp-c-bg);
+}
+
+.t-list-container > .t-lists > .t-pagination > .t-page-info {
+  font-size: 1.25em;
+  height: 2.5em;
+  line-height: 2.5em;
 }
 </style>
