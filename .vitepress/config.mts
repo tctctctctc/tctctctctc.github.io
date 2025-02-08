@@ -29,9 +29,20 @@ export default defineConfig({
     /** 最后更新-文本 */
     lastUpdatedText: '最后更新于',
     /** 博客列表pageSize */
-    pageSize: 5,
+    pageSize: 6,
     /** 大纲级别 */
-    outline: [2, 5]
+    outline: [2, 5],
+    /** 深浅主题切换显示文本 */
+    darkModeSwitchLabel: '主题',
+    /** 悬停到深色模块开关显示的标题 */
+    lightModeSwitchTitle: '切换到浅色模式',
+    /** 悬停到浅色额模块开关显示的标题 */
+    darkModeSwitchTitle: '切换到深色模式',
+    /** 回到顶部文本 */
+    returnToTopLabel: '回到顶部',
+    search: {
+      provider: 'local'
+    }
   },
   /** 设置head标签 */
   head: [['link', { rel: 'icon', href: '/docs/images/head.jpg' }]],
