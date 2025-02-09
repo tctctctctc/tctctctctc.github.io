@@ -1,8 +1,8 @@
-import { defineConfig } from 'vitepress'
+import { defineConfigWithTheme } from 'vitepress'
 import { getMDFilesWithFrontmatter } from './theme/utils'
 
 // https://vitepress.dev/reference/site-config
-export default defineConfig({
+export default defineConfigWithTheme({
   /** 站名 */
   title: "Tang's Blog",
   /** 网站描述 */
@@ -23,6 +23,11 @@ export default defineConfig({
     footer: {
       message: '<a href="https://beian.miit.gov.cn/">湘ICP备2023000741号-1</a>',
       copyright: 'Copyright © 2024-2025 By Tang'
+    },
+    /** 个人简介 */
+    profile: {
+      name: 'Tang',
+      slogan: '言念君子，温其如玉'
     },
     /** 博客 */
     blogs: getMDFilesWithFrontmatter('blogs'),

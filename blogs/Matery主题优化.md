@@ -77,7 +77,7 @@ ___
 
 主题默认会每天更换一张首页上的背景图，一共有6张，为了节省资源，可以全部删除，并设置成使用图床上的固定的背景图，在主题目录 `/layout/_partial/bg-cover-content.ejs`  查找 `<% if (theme.banner.enable) { %>` ，修改其中内容为：
 
-```ejs
+```html
 <script>
     $('.bg-cover').css('background-image', 'url(<%- theme.jsDelivr.url %><%- url_for('你的图片地址) %>)');
 </script>

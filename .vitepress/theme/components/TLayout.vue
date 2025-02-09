@@ -10,7 +10,7 @@
   </layout>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import DefaultTheme from "vitepress/theme";
 import THome from "./THome.vue";
 import TContainer from "./TContainer.vue";

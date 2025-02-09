@@ -5,12 +5,15 @@
       <t-blog-lists />
     </div>
     <!-- 右侧信息，如profile -->
-    <div class="t-aside-container"></div>
+    <div class="t-aside-container">
+      <t-profile />
+    </div>
   </div>
 </template>
 
 <script setup>
 import TBlogLists from "./TBlogLists.vue";
+import TProfile from "./TProfile.vue";
 </script>
 
 <style>
@@ -20,14 +23,15 @@ import TBlogLists from "./TBlogLists.vue";
   margin: 0 auto;
   padding: 40px 15px;
   display: flex;
+  justify-content: space-around;
 }
 
 .t-container > .t-main-container {
-  width: 74%;
+  width: 70%;
 }
 
 .t-container > .t-aside-container {
-  width: 26%;
+  width: 25%;
 }
 
 @media screen and (max-width: 768px) {
@@ -40,6 +44,7 @@ import TBlogLists from "./TBlogLists.vue";
   }
 
   .t-container > .t-aside-container {
+    margin-top: 40px;
     width: 100%;
   }
 }

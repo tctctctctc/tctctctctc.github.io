@@ -41,7 +41,7 @@ import TPagination from "./TPagination.vue";
 const { theme, isDark } = useData();
 
 // 文章数据
-const blogInfos = theme.value.blogs;
+const blogInfos = theme.value.blogs.blogInfos;
 
 // DOM
 const blogListRef = ref(null);

@@ -14,9 +14,10 @@ export type BlogInfo = {
  * @param dir 路径
  * @return
  */
-export function getMDFilesWithFrontmatter(dir: string): BlogInfo[] {
+export function getMDFilesWithFrontmatter(dir: string): { blogInfos: BlogInfo[], tags: Record<string, number> } {
   const files = fs.readdirSync(dir)
   let blogInfos: BlogInfo[] = []
+  let tags: Record<string, number> = {}
 
   files.forEach((file) => {
     const filePath = path.join(dir, file)
@@ -24,14 +25,27 @@ export function getMDFilesWithFrontmatter(dir: string): BlogInfo[] {
 
     if (stat.isDirectory()) {
       // 如果是目录，递归调用该函数
-      blogInfos = blogInfos.concat(getMDFilesWithFrontmatter(filePath))
+      blogInfos = blogInfos.concat(getMDFilesWithFrontmatter(filePath).blogInfos)
     } else if (path.extname(file) === '.md') {
       // 如果是md文件，则解析frontmatter
       const fileContent = fs.readFileSync(filePath, 'utf-8')
       const { data: frontmatter } = matter(fileContent)
+
+      // 保存文章标签
+      for (const tag of frontmatter.tags) {
+        if (tag in tags) {
+          tags[tag] += 1
+        } else {
+          tags[tag] = 1
+        }
+      }
+
       blogInfos.push({ path: filePath.split('.md')[0], frontmatter })
     }
   })
 
-  return blogInfos
+  return {
+    blogInfos: blogInfos,
+    tags: tags
+  }
 }
