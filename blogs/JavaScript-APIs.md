@@ -1,5 +1,5 @@
 ---
-title: JavaScript-APIs.md
+title: JavaScript-APIs
 date: '2023-10-25'
 updated: '2025-02-05'
 tags: 

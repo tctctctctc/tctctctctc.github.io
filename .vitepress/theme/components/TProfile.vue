@@ -11,13 +11,21 @@
     </div>
     <!-- 数据 -->
     <div class="blog-info" v-if="theme.blogs">
-      <div class="blog-info-item">
+      <div class="blog-info-item" v-if="archivePath">
         <span>文章</span>
-        <span>{{ theme.blogs.blogInfos.length }}</span>
+        <span>
+          <a :href="withBase(archivePath)">
+            {{ theme.blogs.blogInfos.length }}
+          </a>
+        </span>
       </div>
-      <div class="blog-info-item">
+      <div class="blog-info-item" v-if="tagPath">
         <span>标签</span>
-        <span>{{ Object.keys(theme.blogs.tags).length }}</span>
+        <span>
+          <a :href="withBase(tagPath)">
+            {{ Object.keys(theme.blogs.tags).length }}
+          </a>
+        </span>
       </div>
     </div>
   </div>
@@ -25,14 +33,31 @@
 
 <script setup>
 import { useData, withBase } from "vitepress";
+import { ref } from "vue";
 
 const { theme, isDark } = useData();
+
+// 归档路径
+const archivePath = ref("");
+// 标签路径
+const tagPath = ref("");
+
+const init = () => {
+  theme.value.nav.forEach((item) => {
+    if (item.text.includes("归档")) {
+      archivePath.value = item.link;
+    } else if (item.text.includes("标签")) {
+      tagPath.value = item.link;
+    }
+  });
+};
+init();
 </script>
 
 <style>
 .t-profile {
   width: 100%;
-  padding: 0 20px;
+  padding: 1em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,7 +71,7 @@ const { theme, isDark } = useData();
 }
 
 .t-profile > .head {
-  margin: 20px;
+  margin-bottom: 20px;
 }
 
 .t-profile > .head > img {

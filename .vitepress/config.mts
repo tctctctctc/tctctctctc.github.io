@@ -11,7 +11,8 @@ export default defineConfigWithTheme({
   themeConfig: {
     /** 顶部导航 */
     nav: [
-      { text: '🏡首页', link: '/' }
+      { text: '🏡首页', link: '/' },
+      { text: '📃归档', link: '/archives' }
     ],
     /** 社交链接 */
     socialLinks: [
@@ -29,7 +30,7 @@ export default defineConfigWithTheme({
       name: 'Tang',
       slogan: '言念君子，温其如玉'
     },
-    /** 博客 */
+    /** 博客，参数前面不要加/ */
     blogs: getMDFilesWithFrontmatter('blogs'),
     /** 最后更新-文本 */
     lastUpdatedText: '最后更新于',

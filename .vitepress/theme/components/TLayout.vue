@@ -7,6 +7,11 @@
     <template #home-features-after>
       <t-container />
     </template>
+
+    <!-- page布局 -->
+    <template #page-top>
+      <t-container layout="archives" />
+    </template>
   </layout>
 </template>
 

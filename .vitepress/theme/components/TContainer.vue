@@ -2,7 +2,8 @@
   <div class="t-container">
     <!-- 左侧内容区，如文章列表 -->
     <div class="t-main-container">
-      <t-blog-lists />
+      <t-blog-lists v-if="layout === 'home'" />
+      <t-archives v-if="layout === 'archives'" />
     </div>
     <!-- 右侧信息，如profile -->
     <div class="t-aside-container">
@@ -14,6 +15,15 @@
 <script setup>
 import TBlogLists from "./TBlogLists.vue";
 import TProfile from "./TProfile.vue";
+import TArchives from "./TArchives.vue";
+
+const props = defineProps({
+  /** home or archives */
+  layout: {
+    type: String,
+    default: "home",
+  },
+});
 </script>
 
 <style>
